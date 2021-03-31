@@ -1,0 +1,10 @@
+rsync
+
+tty
+In Linux, there is a pseudo-teletype multiplexor which handles the connections from all of the terminal window pseudo-teletypes (PTS). The multiplexor is the master, and the PTS are the slaves. The multiplexor is addressed by the kernel through the device file located at /dev/ptmx. Can access a full-screen TTY session by holding down the Ctrl+Alt+F1/F2/F3... keys.
+	tty
+	tty -s
+	tty -s && echo "Echo tty"
+	
+who
+whoami
