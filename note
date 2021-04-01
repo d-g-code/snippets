@@ -8,3 +8,11 @@ In Linux, there is a pseudo-teletype multiplexor which handles the connections f
 	
 who
 whoami
+
+grep
+Is command-line tool that allow find a string in a file or stream. It can be used with a regular expression to be more flexible at finding string.
+	grep -i root /etc/passwd
+	grep -v root /etc/passwd
+	grep -q root /etc/passwd
+	grep -r .gitignore .
+	grep -E -w -i "root|don" /etc/passwd
