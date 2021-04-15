@@ -16,3 +16,29 @@ Is command-line tool that allow find a string in a file or stream. It can be use
 	grep -q root /etc/passwd
 	grep -r .gitignore .
 	grep -E -w -i "root|don" /etc/passwd
+
+find
+Search for files in a directory hierarchy.
+	find .	
+	find direction_name
+	find . -type d
+	find . -type f
+	find . -type f -name "test.txt"
+	find . -type f -name "test*"
+	find . -type f -iname "test.txt"	capital letter
+	find . -type f -name "*.py"
+	find . -type f -mmin -10 			modify 10 minutes ago
+	find . -type f -mmin +10 			modify more than 10 minutes
+	find . -type f -mmin +1 -mmin -5	modify between
+	find . -type f -mtime -10 			modify less 10 days ago
+	find . -type f -mtime +10 			more 10 days ago
+	find . -size +5M/k/G 				over 5 megabyte/kilobyte/gigabyte
+	find . -empty
+	find . -perm 777  					permission
+	find Direction_name -exec chown user:group {} +	 change user and group for file and direction 
+	find Direction_name -type d -exec chmod 775 {} +
+	find Direction_name -type f -exec chmod 665 {} +
+	find . -type f -name "*.jpg" -maxdepth 1					recursion 
+	find . -type f -name "*.jpg" -maxdepth 1 -exec rm {} + 		delete matching result
+
+
