@@ -41,4 +41,8 @@ Search for files in a directory hierarchy.
 	find . -type f -name "*.jpg" -maxdepth 1					recursion 
 	find . -type f -name "*.jpg" -maxdepth 1 -exec rm {} + 		delete matching result
 
-
+inxi
+Command line system information script for console and IRC
+	inxi -A, --audio	show audio/sound information
+	inxi -b				show basic output
+	inxi -D 			show hard disk info
