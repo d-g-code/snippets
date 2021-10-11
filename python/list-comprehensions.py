@@ -49,12 +49,27 @@ matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
 transpose = [[[row[i] for row in matrix]] for i in range(2)]
 print(transpose)
 
-# #
+# transpose of matrix using for loop
 matrix = [[1, 2, 3], [11, 22, 33], [111, 222, 333]]
-a = []
-print([i for row in matrix for i in row])
-for i in matrix:
-    for j in i:
-        a.append(j)
-print(a)
 
+print([i for row in matrix for i in row])
+
+transpose_result = []
+for i in matrix:
+    for row in i:
+        transpose_result.append(row)
+print(transpose_result)
+
+# list comprehension use memory it is good for small or medium-sized list,
+# when large list (1 billion) list comprehension should be avoid,
+# better alternative for such large list is using a generator
+
+# print([[x*x*x] for x in range(0, 10000000)])
+# for x in range(0, 10000000):
+#     print(x*x*x)
+# def generator():
+#     for x in range(0, 10000000):
+#         yield x*x*x
+# gen = generator()
+# for ele in gen:
+#     print(ele)
