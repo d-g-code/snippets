@@ -76,3 +76,7 @@ def execute_read_query(conn, query):
 # select_word_to_update = "SELECT word_eng, word_pol FROM repeating_word WHERE id = 3"
 # selected_word = execute_read_query(connection, select_word_to_update)
 # print(selected_word)
+
+# Delete
+# delete_record = "DELETE FROM repeating_word WHERE id = 2"
+# execute_query(connection, delete_record)
