@@ -9,7 +9,7 @@ def create_connection(path):
         print(sqlite3.version)
         print('Connection to SQLite DB successful')
     except Error as name_error:
-        print(f"The error '{name_error}' occurred")
+        print(f"The error '{name_error}'")
     return conn
 
 
@@ -20,7 +20,7 @@ def execute_query(conn, query):
         conn.commit()
         print("Query executed successfully")
     except Error as error:
-        print(f"The error '{error}' occurred")
+        print(f"The error '{error}'")
 
 
 def execute_read_query(conn, query):
@@ -31,18 +31,19 @@ def execute_read_query(conn, query):
         result = cursor.fetchall()
         return result
     except Error as error:
-        print(f"The error '{error}' occurred")
+        print(f"The error '{error}'")
 
 
 # Queries
-# create_table_repeating_word = """
-# CREATE TABLE IF NOT EXISTS repeating_word (
-#     id INTEGER PRIMARY KEY AUTOINCREMENT,
-#     word_eng TEXT NOT NULL,
-#     word_pol TEXT NOT NULL,
-#     amount_repeat INTEGER
-# );
-# """
+create_table_repeating_word = """
+CREATE TABLE IF NOT EXISTS repeating_word (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    word_eng TEXT NOT NULL,
+    word_pol TEXT NOT NULL,
+    amount_repeat INTEGER,
+    repeat_correct_session INTEGER
+);
+"""
 # execute_query(connection, create_table_repeating_word)
 #
 # create_word = """
