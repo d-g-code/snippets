@@ -1,4 +1,0 @@
-sqlite3
->.schema	                        show the created table in database
->.table		                        show tables in databases
->SELECT * from repeating_word		show all rows
